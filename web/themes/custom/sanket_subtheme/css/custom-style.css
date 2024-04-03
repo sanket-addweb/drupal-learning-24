@@ -1,0 +1,22 @@
+.custom-views-col {
+    /* margin-right: 30px !important; */
+    padding: 10px 20px 10px 15px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.custom-views-row{
+    padding-bottom: 30px;
+}
+
+.view-my-articles .views-field{
+    padding-bottom: 10px;
+}
+
+.view-my-articles .views-field-created .field-content {
+    display: block;
+}
+
+.view-my-articles .views-label{
+    font-weight: 600;
+}

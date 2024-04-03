@@ -1,0 +1,8 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+custom-styling:
+  css:
+    theme:
+      css/custom-style.css: {}

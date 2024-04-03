@@ -1,0 +1,14 @@
+uuid: 331b7ee8-cd34-49d6-8e49-8713841ea9bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - sanket@addwebsolution.in
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

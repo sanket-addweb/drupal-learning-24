@@ -1,0 +1,21 @@
+uuid: ebfa78fb-6504-4bdd-8463-7604158cf879
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.related_articles.field_related_articles_content
+    - paragraphs.paragraphs_type.related_articles
+id: paragraph.related_articles.default
+targetEntityType: paragraph
+bundle: related_articles
+mode: default
+content:
+  field_related_articles_content:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

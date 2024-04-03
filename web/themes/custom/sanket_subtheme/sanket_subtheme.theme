@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_views_pre_view.
+ */
+// exit;
+// function sanket_subtheme_views_pre_view(&$view, &$display_id, &$args) {
+//   dd($view);
+//   dump($view);
+//   exit;
+//   switch ($view->name) {
+//     case 'NAME': {
+//     // Do not show filter for ROLE NAME.
+//     global $user;
+//     if (in_array('ROLENAME', $user->roles)) {
+//       $view_filters = $view->display_handler->get_option('filters');
+//       unset($view_filters['FILTERID']);
+//       $view->display_handler->override_option('filters', $view_filters);
+//     }
+//     break;
+//     }
+//   }
+// }
+
+function sanket_subtheme_views_pre_view(&$view, &$display_id, &$args){
+  dump($view);
+  exit;
+  $view->display['default']->handler->options['filters']['field_raion_value']['value']  = array(
+  'val1' => 'val1'
+  ); 
+}
