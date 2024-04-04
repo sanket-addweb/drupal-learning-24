@@ -1,0 +1,5 @@
+services:
+  custom_view_field.view_query_alter_subscriber:
+    class: \Drupal\custom_view_field\EventSubscriber\CustomViewQueryAlterSubscribrer2
+    tags:
+      - { name: event_subscriber }

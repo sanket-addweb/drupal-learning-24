@@ -3,6 +3,9 @@
 use Drupal\views\ViewExecutable;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 
+use Drupal\custom_view_field\Event\ViewQueryAlterEvent;
+use Drupal\views\Views;
+
 // /**
 //  * Implements hook_views_data_alter().
 //  */
@@ -46,12 +49,59 @@ function custom_view_field_views_data() {
     ],
   ];
 
+  // Create custom view from our database table
+  $data['leader_data']['table']['group'] = t('Fitbit profile');
+  $data['leader_data']['table']['base'] = [
+    'title' => t('Leader profile'),
+    'help' => t('Leader profile data provided by the Leader API\'s User Profile endpoint.'),
+    // 'query_id' => 'fitbit',
+  ];
+
+  $data['leader_data']['name'] = [
+    'title' => t('Leader name'),
+    'help' => t('Leader users\' display name.'),
+    'field' => [
+      'id' => 'standard',
+      'varchar' => TRUE,
+    ],
+  ];
+  $data['leader_data']['average_daily_steps'] = [
+    'title' => t('Average daily steps'),
+    'help' => t('The average daily steps over all the users logged Leader data.'),
+    'field' => [
+      'id' => 'numeric',
+    ],
+  ];
+  $data['leader_data']['height'] = [
+    'title' => t('Height'),
+    'help' => t('Leader users\'s height.'),
+    'field' => [
+      'id' => 'numeric',
+      'float' => TRUE,
+    ],
+    'sort' => [
+      'id' => 'height',
+      // 'id' => 'groupby_numeric',
+    ],
+  ];
+
+  $data['node__field_event_date']['event'] = array(
+    'title' => t('Custom event sort'),
+    'group' => t('Content'),
+    'help' => t('Sort events by past/future, then distance from now.'),
+    'sort' => array(
+      'field' => 'field_event_date_value',
+      'id' => 'event',
+    ),
+  );
+
   return $data;
 }
 
 function custom_view_field_views_pre_view(&$view, &$display_id, &$args){
   // dump($view);
   // dump($view->id());
+
   if($view->id() == 'my_articles'){
     // dump($view->storage->getDisplay('default'));
     $display = $view->storage->getDisplay('default');
@@ -68,13 +118,14 @@ function custom_view_field_views_pre_view(&$view, &$display_id, &$args){
  * Implements hook_form_alter().
  */
 function custom_view_field_form_alter(&$form, &$form_state, $form_id) {
-    // Check if this is the form for the view exposed filter.
-    if ($form_id == 'views_exposed_form' && isset($form['#id']) && strpos($form['#id'], 'views-exposed-form-my-articles') === 0) {
-      // Add placeholder to the title filter.
-      if (isset($form['title'])) {
-        $form['title']['#attributes']['placeholder'] = t('Filter by title');
-      }
+  // Check if this is the form for the view exposed filter.
+  if ($form_id == 'views_exposed_form' && isset($form['#id']) && strpos($form['#id'], 'views-exposed-form-my-articles') === 0) {
+    // Add placeholder to the title filter.
+    if (isset($form['title'])) {
+      $form['title']['#attributes']['placeholder'] = t('Filter by title');
     }
+  }
+    
 }
 
 /**
@@ -93,4 +144,54 @@ function custom_view_field_views_query_alter(ViewExecutable $view, QueryPluginBa
     $orderByArray[] = $newElementOrderBy;
   }
 
+  // Instantiate our event.
+  $event = new ViewQueryAlterEvent($view);
+
+  // Get the event_dispatcher service and dispatch the event.
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch($event, ViewQueryAlterEvent::EVENT_NAME);
+
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function custom_view_field_views_data_alter(&$data) {
+  // Add custom sorting for the 'height' field.
+  // $data['leader_data']['height']['sort'] = [
+  //   'title' => t('Height sorting'),
+  //   'help' => t('Sort by height'),
+  //   'handler' => 'Drupal\custom_view_field\Plugin\views\sort\CustomViewsSortHandlerHeight',
+  // ];
+  // dump($data);
+  // dump($view);
+
+  // $data['leader_data']['height']['sort']['custom_views_sort_handler_height'] = [
+  //   'title' => t('Height sorting'),
+  //   'help' => t('Sort by height'),
+  //   // 'handler' => 'Drupal\custom_views_sort\Plugin\views\sort\CustomViewsSortHandlerHeight',
+  // ];
+
+  // $data['leader_data']['height']['sort'] = [
+  //   "id" => "title",
+  //   "table" => "leader_data",
+  //   "field" => "height",
+  //   "relationship" => "none",
+  //   "group_type" => "group",
+  //   "admin_label" => "",
+  //   // "entity_type" => "node",
+  //   // "entity_field" => "title",
+  //   "plugin_id" => "random_height", //groupby_numeric
+  //   "order" => "ASC",
+  //   // 'handler' => 'Drupal\custom_views_sort\Plugin\views\sort\CustomViewsSortHandlerHeight',
+  // ];
+
+  // // Instantiate our event.
+  // $event = new ViewQueryAlterEvent($data);
+
+  // // Get the event_dispatcher service and dispatch the event.
+  // $event_dispatcher = \Drupal::service('event_dispatcher');
+  // $event_dispatcher->dispatch($event, ViewQueryAlterEvent::EVENT_NAME);
+
+}
+
