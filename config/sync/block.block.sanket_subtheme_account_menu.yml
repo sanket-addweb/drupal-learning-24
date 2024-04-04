@@ -1,0 +1,27 @@
+uuid: 060306e9-9b1b-47cc-8be3-583d99843b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: TVrgcALxg1mjxTtpWoLK9Cl0R3bx1jZvriKMMXtoF9A
+id: sanket_subtheme_account_menu
+theme: sanket_subtheme
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

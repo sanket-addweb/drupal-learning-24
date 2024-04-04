@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.article_new.body
+    - field.field.node.article_new.field_event_date
     - field.field.node.article_new.field_featured_image
     - field.field.node.article_new.field_quote
     - field.field.node.article_new.field_related_articles
     - field.field.node.article_new.field_tags_new
     - node.type.article_new
   module:
+    - datetime
     - media_library
     - paragraphs
     - path
@@ -32,6 +34,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_date:
+    type: datetime_default
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }

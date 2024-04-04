@@ -1,0 +1,22 @@
+uuid: d406f87f-1f5e-4e20-8b9b-d0620974e641
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: bewnCZLTywl00yeZbNKQzQwMneVxKz9Jj-qaltDR72g
+id: sanket_subtheme_messages
+theme: sanket_subtheme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

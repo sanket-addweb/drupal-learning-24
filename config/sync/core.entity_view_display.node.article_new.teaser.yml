@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article_new.body
+    - field.field.node.article_new.field_event_date
     - field.field.node.article_new.field_featured_image
     - field.field.node.article_new.field_quote
     - field.field.node.article_new.field_related_articles
@@ -32,6 +33,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_event_date: true
   field_featured_image: true
   field_quote: true
   field_related_articles: true

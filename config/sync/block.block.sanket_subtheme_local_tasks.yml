@@ -1,0 +1,22 @@
+uuid: bab98ad3-5ae7-414b-a549-88ca19dad3a6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: Xn3s9obZ-qlYt28DsI0CnPt0gy6gzurv_IX1f5RhX_4
+id: sanket_subtheme_local_tasks
+theme: sanket_subtheme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 68349cef-c009-4e40-b536-a571e2adfbd6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: 2TJz1TVXeCKB_R753bT9rtGa7VSrnPx6xyc4L_I4KmQ
+id: sanket_subtheme_local_actions
+theme: sanket_subtheme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

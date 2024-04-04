@@ -1,0 +1,22 @@
+uuid: 61edd6a0-1817-4736-abad-010b76a30765
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: fX2dIetpxI-WIbEBX-WK7wBF9Cd5qO05Ta79sQyFfLM
+id: sanket_subtheme_content
+theme: sanket_subtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

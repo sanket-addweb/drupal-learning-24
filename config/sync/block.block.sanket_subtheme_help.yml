@@ -1,0 +1,22 @@
+uuid: 94e6143b-4d54-47c5-889f-76598de80c86
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: IWzwTRSAFh05DtmlenhkVnw8fsiXqMZJ19YfKOeVQDs
+id: sanket_subtheme_help
+theme: sanket_subtheme
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

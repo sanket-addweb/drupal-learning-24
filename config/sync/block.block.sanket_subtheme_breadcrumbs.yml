@@ -1,0 +1,22 @@
+uuid: 899c90c3-76c2-420c-9ce4-ba86354f62a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: EcCzLlNMQH_pOY2G68sk6UTBcupb3LkwTcyrQqXkk7w
+id: sanket_subtheme_breadcrumbs
+theme: sanket_subtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

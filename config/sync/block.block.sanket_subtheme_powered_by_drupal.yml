@@ -1,0 +1,22 @@
+uuid: ef30dfae-029b-4380-bf67-f0098bde1e78
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sanket_subtheme
+_core:
+  default_config_hash: V076isTIlhH5eN3v43GVgj2Pq1o2RmvhiHox76PeQ-w
+id: sanket_subtheme_powered_by_drupal
+theme: sanket_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
