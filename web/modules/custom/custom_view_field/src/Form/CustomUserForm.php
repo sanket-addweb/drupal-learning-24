@@ -12,10 +12,14 @@ class CustomUserForm extends FormBase{
   }
 
   public function buildForm(array $form, FormStateInterface $form_state){
-    $form['test'] = [
+    $form['subject'] = [
       '#type' => 'textfield',
-      '#title' => t('Test'),
-      // '#description' => 'test field',
+      '#title' => t('Subject'),
+    ];
+
+    $form['message'] = [
+      '#type' => 'textarea',
+      '#title' => t('Message'),
     ];
 
     $form['submit'] = [
