@@ -36,12 +36,17 @@ class CustomMailSubscriber implements EventSubscriberInterface {
    */
   public function doSomeAction(SubmitMailEvent $event) {
     // dump('demo');
-    // exit;
+    // dump($event);
+    // dump($event->getCustomFormState());
+    $form_state = $event->getCustomFormState();
+    $text = $form_state->getValue('test');
+    
     $mailManager = \Drupal::service('plugin.manager.mail');
     $module = 'custom_view_field';
     $key = 'send_mail_custom'; // Replace with Your key
     $to = \Drupal::currentUser()->getEmail();
-    $params['message'] = "This is message from custom EventSubsciber mail sending functionality";
+    // $params['message'] = "This is message from custom EventSubsciber mail sending functionality";
+    $params['message'] = $text;
     $params['title'] = "Title for mail send";
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = true;

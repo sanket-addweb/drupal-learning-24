@@ -8,16 +8,14 @@ use Drupal\Component\EventDispatcher\Event;
 class SubmitMailEvent extends Event {
 
   const SUBMIT = 'event.submit';
-  protected $referenceID;
+  protected $getform_state;
 
-  public function __construct($referenceID)
-  {
-    $this->referenceID = $referenceID;
+  public function __construct($form_state){
+    $this->getform_state = $form_state;
   }
 
-  public function getReferenceID()
-  {
-    return $this->referenceID;
+  public function getCustomFormState(){
+    return $this->getform_state;
   }
 
   public function myEventDescription() {
