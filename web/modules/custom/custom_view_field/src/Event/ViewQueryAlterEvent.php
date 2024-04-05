@@ -17,6 +17,7 @@ class ViewQueryAlterEvent extends Event {
   // This makes it easier for subscribers to reliably use our event name.
   const EVENT_NAME = 'custom_view_query_alter';
 
+  // This drow error
   // public function __construct(ViewExecutable $view){
   //   dump('sanket');
   //   // $this->view = $view;

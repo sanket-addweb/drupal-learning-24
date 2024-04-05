@@ -22,7 +22,10 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/date_filter": "^1.0",
+        "drupal/maillog": "^1.1",
+        "drupal/mailsystem": "^4.4",
         "drupal/paragraphs": "^1.17",
+        "drupal/views_data_export": "^1.4",
         "drush/drush": "^12.5"
     },
     "conflict": {

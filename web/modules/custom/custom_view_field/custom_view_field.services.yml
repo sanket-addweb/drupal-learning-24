@@ -3,3 +3,7 @@ services:
     class: \Drupal\custom_view_field\EventSubscriber\CustomViewQueryAlterSubscribrer2
     tags:
       - { name: event_subscriber }
+  example_events.mail_subscriber:
+    class: Drupal\custom_view_field\EventSubscriber\CustomMailSubscriber
+    tags:
+      - { name: 'event_subscriber' }

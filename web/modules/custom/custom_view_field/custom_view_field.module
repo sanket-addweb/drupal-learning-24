@@ -195,3 +195,19 @@ function custom_view_field_views_data_alter(&$data) {
 
 }
 
+/** * Implements hook_mail(). */
+function custom_view_field_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'send_mail_custom':
+      // dump($message);
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Your mail subject Here: @title', array('@title' => $params['title']), $options);
+      // $message['body'][] = Html::escape($params['message']);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+

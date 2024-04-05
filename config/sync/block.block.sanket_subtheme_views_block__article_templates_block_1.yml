@@ -1,0 +1,24 @@
+uuid: e840d5dc-5e1d-486d-b264-5667b82c8959
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_templates
+  module:
+    - views
+  theme:
+    - sanket_subtheme
+id: sanket_subtheme_views_block__article_templates_block_1
+theme: sanket_subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:article_templates-block_1'
+settings:
+  id: 'views_block:article_templates-block_1'
+  label: 'Article List'
+  label_display: visible
+  provider: views
+  views_label: 'Article List'
+  items_per_page: none
+visibility: {  }

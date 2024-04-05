@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article_new.field_quote
     - field.field.node.article_new.field_related_articles
     - field.field.node.article_new.field_tags_new
+    - image.style.medium
     - node.type.article_new
   module:
     - media
@@ -26,40 +27,22 @@ content:
     settings:
       trim_length: 200
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_featured_image:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_related_articles:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_tags_new:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   field_event_date: true
   field_quote: true
+  field_related_articles: true
+  field_tags_new: true
+  links: true

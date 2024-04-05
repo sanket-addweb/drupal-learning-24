@@ -1,0 +1,7 @@
+custom_view_field.user_form:
+  path: '/custom-user-form'
+  defaults:
+    _form: '\Drupal\custom_view_field\Form\CustomUserForm'
+    _title: 'User form'
+  requirements:
+    _permission: 'access content'
