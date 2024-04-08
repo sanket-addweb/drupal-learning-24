@@ -29,3 +29,10 @@ function sanket_subtheme_views_pre_view(&$view, &$display_id, &$args){
   'val1' => 'val1'
   ); 
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for views_view_unformatted template.
+ */
+function sanket_subtheme_preprocess_views_view_unformatted(&$variables) {
+  $variables['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+}

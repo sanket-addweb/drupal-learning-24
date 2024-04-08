@@ -29,13 +29,17 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{{ dump(fields.label) }}
-{{ dump(fields.label_element) }}
-{{ dump(fields.content)}}
-{% for field in fields -%}
+{% for field in fields %}
+  {# {{ dump(field) }}
+  {{ dump(field.wrapper_element) }}
+  {{ dump(field.content)}} #}
+
+  {{ 'sanket' }} {{ field.content }}
+
+{% endfor %}
 
 {# {{ dump(view) }} #}
-  {{ field.separator }}
+  {# {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
   {%- endif %}
@@ -53,5 +57,5 @@
   {%- endif %}
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
-  {%- endif %}
-{%- endfor %}
+  {%- endif %} #}
+{# {% endfor %} #}

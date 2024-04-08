@@ -25,12 +25,16 @@
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
+    {# <a href="{{ url('<front>') }}node/{{row.content['#row'].nid}}"> #}
 
+    {# absolute url #}
     <a href="{{ path('entity.node.canonical', {'node': row.content['#row']._entity.nid.value }) }}">
-      <b>{{ row.content['#row']._entity.translation(lang).title.value }}</b>
+      <b>{{ row.content['#row']._entity.title.value }}</b>
     </a>
+    {# {{ row.content['#row']._entity.body.0.value|raw }}  #}
 
-    {% set text = row.content['#row']._entity.translation(lang).body.0.value|raw %}
+    {# Trim to 100 character #}
+    {% set text = row.content['#row']._entity.body.0.value|raw %}
     {% set trim_body = text|length > 100 ? text|slice(0, 100) ~ '...' : text|raw %}
     {{ trim_body|raw }}
   </div>
