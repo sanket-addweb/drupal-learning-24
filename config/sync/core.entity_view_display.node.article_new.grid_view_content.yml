@@ -45,4 +45,5 @@ hidden:
   field_quote: true
   field_related_articles: true
   field_tags_new: true
+  langcode: true
   links: true
