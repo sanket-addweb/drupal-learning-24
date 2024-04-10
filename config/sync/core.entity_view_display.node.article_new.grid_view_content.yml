@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article_new.field_quote
     - field.field.node.article_new.field_related_articles
     - field.field.node.article_new.field_tags_new
+    - field.field.node.article_new.layout_builder__layout
     - image.style.medium
     - node.type.article_new
   module:
@@ -46,4 +47,5 @@ hidden:
   field_related_articles: true
   field_tags_new: true
   langcode: true
+  layout_builder__layout: true
   links: true

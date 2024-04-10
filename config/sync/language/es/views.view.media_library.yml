@@ -1,0 +1,30 @@
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nombre
+  page:
+    display_options:
+      fields:
+        edit_media:
+          text: Editar
+        delete_media:
+          text: Eliminar
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nombre
+  widget_table:
+    display_options:
+      fields:
+        name:
+          label: Nombre
+      filters:
+        name:
+          expose:
+            label: Nombre

@@ -1,0 +1,13 @@
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      fields:
+        status:
+          label: Estado
+        operations:
+          label: Operaciones
+      filters:
+        status:
+          group_info:
+            label: Estado

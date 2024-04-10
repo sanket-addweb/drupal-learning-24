@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.article_new.title
     - field.field.node.article_new.body
     - field.field.node.article_new.field_event_date
     - field.field.node.article_new.field_featured_image
@@ -13,9 +14,128 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
     - media
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Banner
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          ff819b6e-31fb-4232-a6b3-9a8c9631c189:
+            uuid: ff819b6e-31fb-4232-a6b3-9a8c9631c189
+            region: first
+            configuration:
+              id: 'field_block:node:article_new:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          02ddec18-c850-4245-b3df-bcf14555786e:
+            uuid: 02ddec18-c850-4245-b3df-bcf14555786e
+            region: second
+            configuration:
+              id: 'field_block:node:article_new:field_featured_image'
+              label: 'Featured Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Main content'
+          context_mapping: {  }
+        components:
+          5589a051-ea51-4bcc-ab35-df65a2961e33:
+            uuid: 5589a051-ea51-4bcc-ab35-df65a2961e33
+            region: content
+            configuration:
+              id: 'field_block:node:article_new:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7596a4c0-a53a-4734-8bd3-3a1321d14e12:
+            uuid: 7596a4c0-a53a-4734-8bd3-3a1321d14e12
+            region: content
+            configuration:
+              id: 'field_block:node:article_new:field_related_articles'
+              label: 'Related Articles'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          09124d53-1a31-4477-a057-c5301f57be51:
+            uuid: 09124d53-1a31-4477-a057-c5301f57be51
+            region: content
+            configuration:
+              id: 'field_block:node:article_new:field_quote'
+              label: Quote
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: node.article_new.default
 targetEntityType: node
 bundle: article_new

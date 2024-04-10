@@ -1,0 +1,11 @@
+uuid: 659b4d52-3bed-4c31-b486-a1302fc71e5f
+langcode: en
+status: true
+dependencies: {  }
+id: test_custom
+block_id: 'inline_block:test_custom_block'
+category: article
+label: 'Test custom'
+image_path: ''
+image_alt: ''
+weight: -100

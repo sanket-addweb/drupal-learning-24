@@ -22,6 +22,8 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/date_filter": "^1.0",
+        "drupal/layout_builder_at": "^2.13",
+        "drupal/layout_builder_browser": "^1.6",
         "drupal/maillog": "^1.1",
         "drupal/mailsystem": "^4.4",
         "drupal/paragraphs": "^1.17",

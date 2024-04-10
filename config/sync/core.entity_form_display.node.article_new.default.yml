@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article_new.field_quote
     - field.field.node.article_new.field_related_articles
     - field.field.node.article_new.field_tags_new
+    - field.field.node.article_new.layout_builder__layout
     - node.type.article_new
   module:
     - datetime
@@ -108,6 +109,16 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 6
@@ -130,6 +141,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -140,4 +156,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

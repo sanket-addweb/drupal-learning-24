@@ -1,0 +1,11 @@
+uuid: 23316957-ef82-4ebf-8f64-954e797d1813
+langcode: en
+status: true
+dependencies: {  }
+id: featured_image
+block_id: 'field_block:node:article_new:field_featured_image'
+category: article
+label: 'Featured Image'
+image_path: ''
+image_alt: ''
+weight: null

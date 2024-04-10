@@ -1,9 +1,9 @@
-uuid: ae02d7fd-22c6-4dcc-b3fd-ff9aef2ba366
+uuid: f32dbeeb-c8dc-44ce-8e66-5f3c015b27da
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.quote
+    - block_content.type.test_custom_block
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.quote
-target_entity_type_id: paragraph
-target_bundle: quote
+id: block_content.test_custom_block
+target_entity_type_id: block_content
+target_bundle: test_custom_block
 default_langcode: site_default
 language_alterable: true

@@ -102,16 +102,16 @@ function custom_view_field_views_pre_view(&$view, &$display_id, &$args){
   // dump($view);
   // dump($view->id());
 
-  if($view->id() == 'my_articles'){
-    // dump($view->storage->getDisplay('default'));
-    $display = $view->storage->getDisplay('default');
-    // dump($display['display_options']['filters']['title']['operator']); //contains
-    // $display['display_options']['filters']['title']['operator'] = 'contains';
-    $display['display_options']['filters']['title']['expose']['placeholder'] = 'filter by title';
-    // dump($display['display_options']['filters']['title']['expose']['placeholder']);
-    // exit;
-    // dump($view->getDisplay());
-  }
+  // if($view->id() == 'my_articles'){
+  //   // dump($view->storage->getDisplay('default'));
+  //   $display = $view->storage->getDisplay('default');
+  //   // dump($display['display_options']['filters']['title']['operator']); //contains
+  //   // $display['display_options']['filters']['title']['operator'] = 'contains';
+  //   $display['display_options']['filters']['title']['expose']['placeholder'] = 'filter by title';
+  //   // dump($display['display_options']['filters']['title']['expose']['placeholder']);
+  //   // exit;
+  //   // dump($view->getDisplay());
+  // }
 }
 
 /**

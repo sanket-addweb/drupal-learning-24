@@ -1,0 +1,11 @@
+uuid: fd168c48-3b83-4239-906e-64192a0d61ee
+langcode: en
+status: true
+dependencies: {  }
+id: body_page
+block_id: 'field_block:node:page:body'
+category: test
+label: 'Body page'
+image_path: ''
+image_alt: ''
+weight: -99

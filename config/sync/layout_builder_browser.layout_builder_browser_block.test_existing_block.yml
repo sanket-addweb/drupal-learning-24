@@ -1,0 +1,11 @@
+uuid: 79f9425b-b22e-4e97-8343-b87e86e66d4c
+langcode: en
+status: true
+dependencies: {  }
+id: test_existing_block
+block_id: 'block_content:9d5b11de-e0bd-4773-8868-7a58534953aa'
+category: article
+label: 'Test existing block'
+image_path: ''
+image_alt: ''
+weight: -100
