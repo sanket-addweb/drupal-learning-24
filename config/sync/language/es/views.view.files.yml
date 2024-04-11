@@ -9,6 +9,13 @@ display:
           label: Estado
         operations:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         status:
           expose:
@@ -18,3 +25,7 @@ display:
       fields:
         type:
           label: 'Tipo de entidad'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'

@@ -5,3 +5,7 @@ display:
       fields:
         title:
           label: Título
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'

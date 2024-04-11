@@ -9,7 +9,17 @@ display:
           label: Estado
         operations:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         bundle:
           expose:
             label: Tipo
+        langcode:
+          expose:
+            label: Idioma

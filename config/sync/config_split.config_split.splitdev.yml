@@ -1,0 +1,20 @@
+uuid: b550b3a1-5e48-41be-ae28-66b93f15df72
+langcode: en
+status: true
+dependencies: {  }
+id: splitdev
+label: Splitdev
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list:
+  - core.date_format.long
+partial_list:
+  - system.menu.devel

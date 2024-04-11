@@ -1,10 +1,7 @@
 display:
   default:
-    display_title: 'Por defecto'
     display_options:
       pager:
         options:
           expose:
             items_per_page_label: 'Elementos por página'
-  block_1:
-    display_title: Bloque

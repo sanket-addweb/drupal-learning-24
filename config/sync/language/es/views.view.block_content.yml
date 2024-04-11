@@ -5,6 +5,10 @@ display:
       fields:
         operations:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
   page_1:
     display_options:
       menu:

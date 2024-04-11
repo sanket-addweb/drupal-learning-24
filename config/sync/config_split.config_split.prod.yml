@@ -1,0 +1,21 @@
+uuid: f85658b5-09d8-4f07-943a-a6f38d61ed86
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: Prod
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/prod
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list:
+  - devel.settings
+  - devel.toolbar.settings
+  - system.menu.devel
+partial_list: {  }

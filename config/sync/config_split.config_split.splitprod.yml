@@ -1,0 +1,19 @@
+uuid: 6414313a-a873-4c24-930f-a8a6f77ecca6
+langcode: en
+status: true
+dependencies: {  }
+id: splitprod
+label: SplitProd
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  block_class: 0
+theme: {  }
+complete_list:
+  - core.date_format.short
+partial_list:
+  - system.menu.main

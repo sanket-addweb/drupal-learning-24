@@ -1,0 +1,20 @@
+uuid: 364ad51c-5838-4ea0-a885-900c4c1cd81f
+langcode: en
+status: true
+dependencies: {  }
+id: splitstage
+label: SplitStage
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
+theme: {  }
+complete_list:
+  - core.date_format.medium
+partial_list:
+  - system.menu.admin

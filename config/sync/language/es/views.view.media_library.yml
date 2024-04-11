@@ -2,10 +2,22 @@ display:
   default:
     display_title: 'Por defecto'
     display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
       filters:
         name:
           expose:
             label: Nombre
+        bundle:
+          expose:
+            label: 'Tipos multimedia'
+          group_info:
+            label: 'Tipos multimedia'
+        langcode:
+          expose:
+            label: Idioma
   page:
     display_options:
       fields:

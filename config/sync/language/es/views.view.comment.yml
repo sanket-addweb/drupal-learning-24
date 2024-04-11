@@ -1,12 +1,33 @@
+label: Comentarios
 display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Comentarios
       fields:
         operations:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+      exposed_form:
+        options:
+          submit_button: Filtro
+      filters:
+        langcode:
+          expose:
+            label: Idioma
+  page_published:
+    display_options:
+      menu:
+        title: Comentarios
   page_unapproved:
     display_options:
       fields:
         operations:
           label: Operaciones
+      filters:
+        langcode:
+          expose:
+            label: Idioma

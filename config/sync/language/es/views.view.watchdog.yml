@@ -3,10 +3,19 @@ display:
     display_title: 'Por defecto'
     display_options:
       fields:
+        nothing:
+          admin_label: Icono
         type:
           label: Tipo
         link:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         type:
           expose:

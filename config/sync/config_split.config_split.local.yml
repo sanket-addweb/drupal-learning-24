@@ -1,0 +1,18 @@
+uuid: efa55a09-e7c4-40ee-94bf-0ffec3066f53
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/local
+module: {  }
+theme: {  }
+complete_list:
+  - devel.settings
+  - devel.toolbar.settings
+partial_list: {  }

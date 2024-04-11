@@ -3,11 +3,29 @@ display:
     display_title: 'Por defecto'
     display_options:
       fields:
+        name:
+          label: 'Nombre de usuario'
         status:
           label: Estado
+          settings:
+            format_custom_true: Activo
         operations:
           label: Operaciones
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         status:
           group_info:
             label: Estado
+            group_items:
+              1:
+                title: Activo
+  page_1:
+    display_options:
+      menu:
+        title: Listado
