@@ -9,6 +9,8 @@ display:
           label: Estado
           settings:
             format_custom_true: Activo
+        roles_target_id:
+          label: Roles
         operations:
           label: Operaciones
       pager:

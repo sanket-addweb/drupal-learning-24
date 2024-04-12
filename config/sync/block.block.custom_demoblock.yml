@@ -1,0 +1,20 @@
+uuid: 657e7fdc-5a49-49de-a0e3-bef745518117
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_demo
+  theme:
+    - sanket_subtheme
+id: custom_demoblock
+theme: sanket_subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: custom_block_basic
+settings:
+  id: custom_block_basic
+  label: 'Custom demo block'
+  label_display: '0'
+  provider: custom_demo
+visibility: {  }

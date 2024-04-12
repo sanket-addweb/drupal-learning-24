@@ -1,7 +1,9 @@
+label: 'Media library'
 display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Media
       pager:
         options:
           expose:

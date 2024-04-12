@@ -1,0 +1,24 @@
+uuid: a3f112c8-67c8-4d84-b422-96c9f508af25
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.test_rendom_data
+  module:
+    - views
+  theme:
+    - sanket_subtheme
+id: sanket_subtheme_views_block__test_rendom_data_block_1
+theme: sanket_subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:test_rendom_data-block_1'
+settings:
+  id: 'views_block:test_rendom_data-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '5'
+visibility: {  }

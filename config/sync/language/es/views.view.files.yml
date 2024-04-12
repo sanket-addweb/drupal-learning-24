@@ -1,7 +1,9 @@
+label: Files
 display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Files
       fields:
         filename:
           label: Nombre
@@ -20,6 +22,10 @@ display:
         status:
           expose:
             label: Estado
+  page_1:
+    display_options:
+      menu:
+        title: Files
   page_2:
     display_options:
       fields:
