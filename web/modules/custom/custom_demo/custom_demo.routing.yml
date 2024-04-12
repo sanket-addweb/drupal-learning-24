@@ -1,0 +1,7 @@
+custom_demo.get_article_data:
+  path: '/get-article-data'
+  defaults:
+    _controller: '\Drupal\custom_demo\Controller\ArticleDataController::getArticleData'
+    _title: 'Article data'
+  requirements:
+    _permission: 'access content'

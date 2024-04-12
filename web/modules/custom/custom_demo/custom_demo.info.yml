@@ -1,0 +1,5 @@
+name: Custom demo
+description: Provide custom code reference and demo functionality
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
