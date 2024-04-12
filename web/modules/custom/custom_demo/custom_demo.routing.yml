@@ -5,3 +5,11 @@ custom_demo.get_article_data:
     _title: 'Article data'
   requirements:
     _permission: 'access content'
+
+custom_demo.get_return_data:
+  path: '/get-return-data'
+  defaults:
+    _controller: '\Drupal\custom_demo\Controller\ReturnStatmentController::getReturnData'
+    _title: "Different Type's of return data"
+  requirements:
+    _permission: 'access content'

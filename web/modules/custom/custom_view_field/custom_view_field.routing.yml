@@ -5,3 +5,11 @@ custom_view_field.user_form:
     _title: 'User form'
   requirements:
     _permission: 'access content'
+
+custom_view_field.get_language:
+  path: '/know-your-language'
+  defaults:
+    _controller: '\Drupal\custom_view_field\Controller\LanugageController::getLanguage'
+    _title: 'Know your language'
+  requirements:
+    _permission: 'access content'

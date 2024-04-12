@@ -5,6 +5,7 @@ namespace Drupal\custom_demo\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ArticleDataController extends ControllerBase{
 
@@ -29,7 +30,6 @@ class ArticleDataController extends ControllerBase{
       $node_data[$nid]['quote']['quote_title'] =  $node->field_quote->entity->field_quote->value;
       $node_data[$nid]['quote']['quote_author'] =  $node->field_quote->entity->field_quote_autor->value;
 
-
       //Content reference
       $related_articles_title = $node->field_related_articles->entity->title->value;
       if(!empty($related_articles_title)){
@@ -40,7 +40,10 @@ class ArticleDataController extends ControllerBase{
       }
 
     }
-    dump($node_data);
+    // dump($node_data);
+    $response = new JsonResponse($node_data);
+    return $response;
+
     return [
       '#type' => 'markup',
       '#markup' => "This text is comming from controller"
